@@ -17,8 +17,9 @@ products = (z * x
             for x in range(max_num, z - 1, -2)
             if z * x % 11 == 0 and is_num_palindromic(z*x))
 for product in products:
-     print(product,f'time:{end-start}')
      end = time.time()
+     print(product,f'time:{end-start}')
+     
      break
     
         
