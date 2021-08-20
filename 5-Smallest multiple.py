@@ -16,7 +16,6 @@ for num in range(1,21):
     for element in Factors_list:
         while Factors_list.count(element) > LCM_list.count(element) :
             LCM_list.append(element)
-    X = Factors_list.copy()
     Factors_list =[]
 for factor in LCM_list:
      result = result * factor
