@@ -1,24 +1,38 @@
 import math
-def get_prime_list(num, primelist=[2, 3, 5, 7, 11]):
-       '''enter (num) an intger and returns list of all prime smaller than this number'''
+import time
+
+def is_prime(num, primelist=[2, 3]):
+       '''enter (num) an intger larger than or equal to 2 and returns True if prime, and False if not'''
+       d= 3
+       if num == 2:
+         return (True)
+       if num % 2 == 0:
+         return(False)
+       while d <= ((int(math.sqrt(num)))+1):
+         if num % d == 0 :
+          return(False)
+         else:
+           d += 2
+       return True
+
+def get_prime_list(n, primelist=[2]):
+       '''enter (n) an intger and returns list of all primes whose index smaller than this number'''
       
-       for i in range(primelist[-1],num,2):
-           is_num_prime = True
-           for prime in primelist :
-             if prime <= ((int(math.sqrt(num)))+1):
-               if i % prime == 0:
-                 is_num_prime = False
-           if is_num_prime == True :
-                   primelist.append(i)
+       count,num =1,3
+       while count < n:
+            if is_prime(num) == True:
+                count +=1
+                primelist.append(num)
+            num +=2
        return (primelist)
-num=600851475143 
-primelist= get_prime_list(10000) #I have limited my testing but this method is not that efficient a better one is Sieve of Eratosthenes algorithm 
+
+num=600851475143
+primelist= get_prime_list(2000) #I have limited my testing to the 2000th prime(=17389) which more than enough, but this method is not that efficient a better one is Sieve of Eratosthenes algorithm 
 factors=[]
 for prime in primelist:
     if num % prime == 0:
         factors.append(prime)
 print(factors)
-
 
 
 
