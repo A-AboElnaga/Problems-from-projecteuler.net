@@ -11,7 +11,6 @@ start = time.time()
 n =3
 max_num = ((10**n) -1)
 min_num = (10**(n-1))
-start
 products = (z * x
             for z in range(max_num, min_num - 1, -2)
             for x in range(max_num, z - 1, -2)
