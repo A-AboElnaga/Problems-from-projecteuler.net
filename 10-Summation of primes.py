@@ -20,7 +20,7 @@ def is_prime(num, primelist=[2, 3]):
              d += 6     #increase k by 1 which is equivalent to d+6
        return True
 summ= 2
-for i in range(3,100000,2):
+for i in range(3,2000000,2):
   if is_prime(i)== True:
     summ +=i
 end= time.time()
