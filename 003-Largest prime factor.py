@@ -38,22 +38,23 @@ print(factors)
 
 #Sieve of Eratosthenes algorithm 
 def primefactors(n):
+   list1 =[]
    #even number divisible
    while n % 2 == 0:
-      print (2),
+      list1.append(2),
       n = n / 2
     
    #n became odd
    for i in range(3,int(math.sqrt(n))+1,2):
      
       while (n % i == 0):
-         print (i)
+         list1.append(i)
          n = n / i
    if n > 2:
-      print (n)
- 
+      list1.append(n)
+   return list1
 n = 600851475143
-primefactors(n)
+list_of_prime_factors = primefactors(n)
 
 
                  
