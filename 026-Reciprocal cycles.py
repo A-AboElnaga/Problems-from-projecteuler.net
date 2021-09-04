@@ -33,7 +33,7 @@ for num in range(1,1001,1): #you can change the step to 2 and only search odd nu
   if length > big:
     big = length
     d = num
-  if count >1002:
+  if count >1002: #No need for this condition but I like having breaks when I am risking infinite loops
     break
 print(d,big)
 end = time.time()
