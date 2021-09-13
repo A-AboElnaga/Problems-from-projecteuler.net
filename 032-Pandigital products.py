@@ -1,5 +1,5 @@
 import time
-# Method 1, brute force 
+# Method 1: Brute force with limt of 9999 as a 4 digit multiplied by an integer, 1 for example, will result in a 4 digit product; therefore a total of 9 digits and we need no more
 dict1={}
 summ=0
 start= time.time()
@@ -17,7 +17,7 @@ print(summ)
 print(time.time()-start)
   
   
-#Building a function to return all possible permutations
+#Methos 2:Building a function to return all possible permutations (not efficient)
 
 def get_permutations(sequence):
     '''
