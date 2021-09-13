@@ -1,3 +1,22 @@
+import time
+# Method 1, brute force 
+dict1={}
+summ=0
+start= time.time()
+for x in range(1,9999):
+ for y in range(1,9999):
+    num1= str(x)
+    num2= str(y)
+    res="".join(sorted(num1+num2+str(x*y)))
+    if len(res)>9: break
+    if res=='123456789':
+      dict1[x*y]=1
+for key in dict1:
+  summ+=(key)
+print(summ)
+print(time.time()-start)
+  
+  
 #Building a function to return all possible permutations
 
 def get_permutations(sequence):
@@ -43,6 +62,7 @@ def get_permutations(sequence):
                 perms.append(new_word)
     final_list= list(dict.fromkeys(perms)) #remove duplicates
     return final_list
+start= time.time()
   
 dict1={}
 summ=0
@@ -60,6 +80,8 @@ for x in range(1,9):
 for key in dict1:
   summ+=key
 print(summ)
+print(time.time()-start)
+
   
   
   
