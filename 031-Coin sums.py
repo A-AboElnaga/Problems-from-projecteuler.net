@@ -20,6 +20,8 @@ def fun(total, coins,const,memo={}):
   ans=0
   for coin in coins:
     rem= total - coin
+    if rem <0:
+      break
     if str(total)+'-'+str(const) in memo:
       return memo[str(total)+'-'+str(const)]
     if rem>=0 and coin>=const:
@@ -28,3 +30,4 @@ def fun(total, coins,const,memo={}):
   return ans
 target=200
 print(fun(target,coins,0))
+
