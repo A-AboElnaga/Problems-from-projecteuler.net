@@ -20,6 +20,6 @@ for word in words:
   if value in Tri_numbers:
     Res.append(word)
 
-    
+print(len(Res))
       
       
